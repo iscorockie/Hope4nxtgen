@@ -1828,12 +1828,16 @@ a {
   width: 46px;
   height: 46px;
   background: rgba(238, 108, 43, 0.1);
+  color: var(--orange);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
   flex-shrink: 0;
+}
+.contact-icon svg {
+  width: 22px;
+  height: 22px;
 }
 .contact-text h4 {
   font-family: 'Sora', sans-serif;
