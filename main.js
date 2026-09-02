@@ -1,6 +1,6 @@
 /* programmes-carousel.js
-   Place this file at: ./js/programmes-carousel.js
-   Link it in your HTML just before </body>
+   Slider for the "Five Programmes. One Mission." section.
+   Navigation via dots, swipe, and autoplay (no arrow buttons).
 */
 
 (function () {
@@ -12,23 +12,31 @@
 
   var track = document.getElementById('carouselTrack');
   var viewport = document.getElementById('carouselViewport');
-  var btnPrev = document.getElementById('carouselPrev');
-  var btnNext = document.getElementById('carouselNext');
   var dotsEl = document.getElementById('carouselDots');
 
-  if (!track || !viewport || !btnPrev || !btnNext) return;
+  if (!track || !viewport) return;
 
   var cards = Array.from(track.querySelectorAll('.prog-card'));
   var totalCards = cards.length;
-  var maxIndex = totalCards - VISIBLE_COUNT; // 0-based last valid position
+
+  function getVisibleCount() {
+    if (window.matchMedia('(max-width: 560px)').matches) return 1;
+    if (window.matchMedia('(max-width: 900px)').matches) return 2;
+    return VISIBLE_COUNT;
+  }
+
+  var visible = getVisibleCount();
+  var maxIndex = Math.max(0, totalCards - visible);
   var current = 0;
   var timer = null;
 
   /* ---------- dots ---------- */
   function buildDots() {
+    if (!dotsEl) return;
     dotsEl.innerHTML = '';
     for (var i = 0; i <= maxIndex; i++) {
       var dot = document.createElement('button');
+      dot.type = 'button';
       dot.className = 'carousel-dot';
       dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
       dot.dataset.index = i;
@@ -41,6 +49,7 @@
   }
 
   function updateDots() {
+    if (!dotsEl) return;
     var dots = dotsEl.querySelectorAll('.carousel-dot');
     dots.forEach(function (d, i) {
       d.classList.toggle('is-active', i === current);
@@ -62,7 +71,6 @@
     var offset = current * (cardW + GAP_PX);
     track.style.transform = 'translateX(-' + offset + 'px)';
     updateDots();
-    updateButtons();
   }
 
   function next() {
@@ -70,11 +78,6 @@
   }
   function prev() {
     goTo(current > 0 ? current - 1 : maxIndex);
-  }
-
-  function updateButtons() {
-    btnPrev.disabled = false;
-    btnNext.disabled = false;
   }
 
   /* ---------- auto-play ---------- */
@@ -95,16 +98,6 @@
         showWork(programme);
       }
     });
-  });
-
-  /* ---------- button clicks ---------- */
-  btnPrev.addEventListener('click', function () {
-    prev();
-    resetTimer();
-  });
-  btnNext.addEventListener('click', function () {
-    next();
-    resetTimer();
   });
 
   /* ---------- pause on hover ---------- */
@@ -140,6 +133,13 @@
   window.addEventListener('resize', function () {
     clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(function () {
+      var v = getVisibleCount();
+      if (v !== visible) {
+        visible = v;
+        maxIndex = Math.max(0, totalCards - visible);
+        current = Math.min(current, maxIndex);
+        buildDots();
+      }
       goTo(current);
     }, 150);
   });

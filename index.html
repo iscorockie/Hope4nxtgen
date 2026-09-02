@@ -7,10 +7,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&family=Raleway:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link href="./index.css" rel="stylesheet" />
+    <link href="./index.css?v=3" rel="stylesheet" />
   </head>
   <body>
     <!-- NAVIGATION -->
@@ -82,20 +82,56 @@
     <section class="hero" id="home">
       <div class="hero-bg" id="heroBg"></div>
       <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <div class="hero-eyebrow">Mbale City, Uganda — Est. 2019</div>
-        <h1 class="hero-title">
-          Unlocking <span>Potential</span><br />
-          for Every Child
-        </h1>
-        <p class="hero-sub">
-          Harnessing the transformative power of sport, education, and community
-          to build a generation of confident, resilient leaders across Mbale
-          City.
-        </p>
-        <div class="hero-ctas">
-          <a href="#programmes" class="btn btn-outline">Explore Our Work</a>
-          <!-- <a href="#donate" class="btn btn-primary">Donate Now</a> -->
+      <div class="hero-blob hero-blob--gold"></div>
+      <div class="hero-blob hero-blob--orange"></div>
+      <div class="hero-inner container">
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span class="hero-eyebrow-dot"></span>
+            Mbale City, Uganda — Est. 2019
+          </div>
+          <h1 class="hero-title">
+            Unlocking <span>Potential</span><br />
+            for Every Child
+          </h1>
+          <p class="hero-sub">
+            Harnessing the transformative power of sport, education, and
+            community to build a generation of confident, resilient leaders
+            across Mbale City.
+          </p>
+          <div class="hero-ctas">
+            <a href="#programmes" class="btn btn-primary">Explore Our Work</a>
+            <a href="#team" class="btn btn-ghost">Meet the Team</a>
+          </div>
+          <div class="hero-trust">
+            <div class="hero-trust-avatars">
+              <img src="./assets/team/isiko.png" alt="HNG team member" />
+              <img src="./assets/team/ivan.png" alt="HNG team member" />
+              <img src="./assets/team/jonathan.png" alt="HNG team member" />
+              <img src="./assets/team/sharon.png" alt="HNG team member" />
+            </div>
+            <p>
+              <strong>2,400+ children &amp; youth</strong><br />
+              reached across 6 communities
+            </p>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-media-frame">
+            <img src="./assets/kids_group.jpg" alt="HNG coach with young athletes" />
+          </div>
+          <div class="hero-float hero-float--stat">
+            <div class="hf-num">2,400<span>+</span></div>
+            <div class="hf-label">Children Reached</div>
+          </div>
+          <div class="hero-float hero-float--card">
+            <div class="hf-badge">5</div>
+            <div class="hf-text">
+              <div class="hf-title">Programme Areas</div>
+              <div class="hf-sub">Sport · Education · Girls</div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="hero-scroll">
@@ -151,14 +187,6 @@
         </div>
 
         <div class="carousel-wrapper">
-          <button
-            class="carousel-btn carousel-btn--prev"
-            id="carouselPrev"
-            aria-label="Previous slide"
-          >
-            &#8592;
-          </button>
-
           <div class="carousel-viewport" id="carouselViewport">
             <div class="carousel-track" id="carouselTrack">
               <div
@@ -267,14 +295,6 @@
               </div>
             </div>
           </div>
-
-          <button
-            class="carousel-btn carousel-btn--next"
-            id="carouselNext"
-            aria-label="Next slide"
-          >
-            &#8594;
-          </button>
         </div>
 
         <div class="carousel-dots" id="carouselDots"></div>
@@ -291,22 +311,22 @@
           </h2>
         </div>
         <div class="work-tabs">
-          <button
+          <button type="button"
             class="work-tab active"
             onclick="switchWork('education', this)"
           >
             Education
           </button>
-          <button class="work-tab" onclick="switchWork('sports', this)">
+          <button type="button" class="work-tab" onclick="switchWork('sports', this)">
             Sports &amp; Talent
           </button>
-          <button class="work-tab" onclick="switchWork('protection', this)">
+          <button type="button" class="work-tab" onclick="switchWork('protection', this)">
             Child Protection
           </button>
-          <button class="work-tab" onclick="switchWork('girls', this)">
+          <button type="button" class="work-tab" onclick="switchWork('girls', this)">
             Girls Empowerment
           </button>
-          <button class="work-tab" onclick="switchWork('sustainability', this)">
+          <button type="button" class="work-tab" onclick="switchWork('sustainability', this)">
             Sustainability
           </button>
         </div>
@@ -684,21 +704,36 @@
             </p>
             <div class="values-grid">
               <div class="value-item">
-                <!-- <div class="value-icon">👶</div> -->
+                <div class="value-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="color: var(--orange)">
+                    <path d="M12 21s-7.5-4.35-9.6-9A5.1 5.1 0 0 1 12 6.6 5.1 5.1 0 0 1 21.6 12c-2.1 4.65-9.6 9-9.6 9Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                  </svg>
+                </div>
                 <div class="value-text">
                   <h4>Child-Centred</h4>
                   <p>Children's best interests guide every decision we make.</p>
                 </div>
               </div>
               <div class="value-item">
-                <!-- <div class="value-icon">🤝</div> -->
+                <div class="value-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="color: var(--orange)">
+                    <path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 3 4.5 6v5c0 4.4 3.2 8.3 7.5 9.5 4.3-1.2 7.5-5.1 7.5-9.5V6L12 3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                  </svg>
+                </div>
                 <div class="value-text">
                   <h4>Integrity</h4>
                   <p>Full financial transparency — openly published.</p>
                 </div>
               </div>
               <div class="value-item">
-                <!-- <div class="value-icon">♿</div> -->
+                <div class="value-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="color: var(--orange)">
+                    <circle cx="9" cy="7" r="3" stroke="currentColor" stroke-width="1.7"/>
+                    <circle cx="17" cy="9" r="2.3" stroke="currentColor" stroke-width="1.7"/>
+                    <path d="M3.5 20a5.5 5.5 0 0 1 11 0M15 20a4 4 0 0 1 6-3.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                  </svg>
+                </div>
                 <div class="value-text">
                   <h4>Inclusion</h4>
                   <p>
@@ -708,7 +743,11 @@
                 </div>
               </div>
               <div class="value-item">
-                <!-- <div class="value-icon">📊</div> -->
+                <div class="value-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="color: var(--orange)">
+                    <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
                 <div class="value-text">
                   <h4>Accountability</h4>
                   <p>
@@ -717,7 +756,12 @@
                 </div>
               </div>
               <div class="value-item">
-                <!-- <div class="value-icon">🌍</div> -->
+                <div class="value-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="color: var(--orange)">
+                    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/>
+                    <path d="M3 12h18M12 3c2.5 2.4 3.9 5.7 4 9-.1 3.3-1.5 6.6-4 9-2.5-2.4-3.9-5.7-4-9 .1-3.3 1.5-6.6 4-9Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                  </svg>
+                </div>
                 <div class="value-text">
                   <h4>Community Ownership</h4>
                   <p>
@@ -727,7 +771,12 @@
                 </div>
               </div>
               <div class="value-item">
-                <!-- <div class="value-icon">💡</div> -->
+                <div class="value-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="color: var(--orange)">
+                    <path d="M9 18h6M10 21h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                    <path d="M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1.1 2h5c.1-.8.5-1.5 1.1-2A6 6 0 0 0 12 3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                  </svg>
+                </div>
                 <div class="value-text">
                   <h4>Innovation</h4>
                   <p>Creative, evidence-based solutions are our hallmark.</p>
@@ -845,7 +894,7 @@
 
           <!-- Education & Life Skills -->
           <div class="team-card fade-up stagger-3">
-            <div class="team-photo">👤</div>
+            <div class="team-photo team-photo--placeholder"><svg width="72" height="72" viewBox="0 0 24 24" fill="none" aria-hidden="true" class="team-avatar"><circle cx="12" cy="8.5" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
             <div class="team-body">
               <h4>Kairu Hannington</h4>
               <div class="team-role">
@@ -861,7 +910,7 @@
 
           <!-- Sports Coordinator -->
           <div class="team-card fade-up stagger-4">
-            <div class="team-photo">👤</div>
+            <div class="team-photo team-photo--placeholder"><svg width="72" height="72" viewBox="0 0 24 24" fill="none" aria-hidden="true" class="team-avatar"><circle cx="12" cy="8.5" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
             <div class="team-body">
               <h4>Stephen Anguma</h4>
               <div class="team-role">SPORTS FOR DEVELOPMENT CO-ORDINATOR</div>
@@ -875,7 +924,7 @@
 
           <!-- Child Protection -->
           <div class="team-card fade-up stagger-5">
-            <div class="team-photo">👤</div>
+            <div class="team-photo team-photo--placeholder"><svg width="72" height="72" viewBox="0 0 24 24" fill="none" aria-hidden="true" class="team-avatar"><circle cx="12" cy="8.5" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
             <div class="team-body">
               <h4>Bernard Wanda</h4>
               <div class="team-role">
@@ -934,9 +983,9 @@
               </div>
             </div>
             <div class="story-dots">
-              <button class="story-dot active" onclick="setStory(0)"></button>
-              <button class="story-dot" onclick="setStory(1)"></button>
-              <button class="story-dot" onclick="setStory(2)"></button>
+              <button type="button" class="story-dot active" onclick="setStory(0)" aria-label="Show story 1"></button>
+              <button type="button" class="story-dot" onclick="setStory(1)" aria-label="Show story 2"></button>
+              <button type="button" class="story-dot" onclick="setStory(2)" aria-label="Show story 3"></button>
             </div>
           </div>
         </div>
@@ -1230,7 +1279,7 @@
 
           <div class="sdg-panel fade-up stagger-4">
             <div class="sdg-panel-header sdg15-header">
-              <!-- <div class="sdg-panel-icon">🌍</div> -->
+              <!-- <div class="sdg-panel-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true" style="width:20px;height:20px"><circle cx="12" cy="12" r="9" stroke="#ffc95c" stroke-width="1.8"/><path d="M3 12h18M12 3c2.5 2.4 3.9 5.7 4 9-.1 3.3-1.5 6.6-4 9-2.5-2.4-3.9-5.7-4-9 .1-3.3 1.5-6.6 4-9Z" stroke="#ffc95c" stroke-width="1.8" stroke-linejoin="round"/></svg></div> -->
               <div>
                 <h3>SDG 15 - Life on Land</h3>
                 <p>Protect, restore, and promote sustainable ecosystems</p>
@@ -1259,7 +1308,7 @@
           style="
             text-align: center;
             margin-top: 56px;
-            font-family: 'Sen', sans-serif;
+            font-family: 'Sora', sans-serif;
             font-size: 1.4rem;
             font-style: italic;
             color: var(--purple);
@@ -1366,19 +1415,19 @@
           </p>
         </div>
         <div class="involve-tabs fade-up">
-          <!-- <button
+          <!-- <button type="button"
             class="involve-tab active"
             onclick="switchInvolve('donate', this)"
           >
-            💝 Donate
+            Donate
           </button> -->
-          <button
-            class="involve-tab"
+          <button type="button"
+            class="involve-tab active"
             onclick="switchInvolve('volunteer', this)"
           >
             Volunteer
           </button>
-          <button class="involve-tab" onclick="switchInvolve('partner', this)">
+          <button type="button" class="involve-tab" onclick="switchInvolve('partner', this)">
             Partner With Us
           </button>
         </div>
@@ -1430,14 +1479,14 @@
                 </div>
               </div>
               <div style="display: flex; gap: 12px; margin-bottom: 20px">
-                <button
+                <button type="button"
                   style="
                     flex: 1;
                     padding: 12px;
                     border-radius: 6px;
                     border: 2px solid #e0d8ec;
                     background: white;
-                    font-family: Raleway, sans-serif;
+                    font-family: 'Sora', sans-serif;
                     font-weight: 600;
                     font-size: 0.88rem;
                     cursor: pointer;
@@ -1450,24 +1499,24 @@
                 >
                   One-Time
                 </button>
-                <button
+                <button type="button"
                   style="
                     flex: 1;
                     padding: 12px;
                     border-radius: 6px;
                     border: 2px solid var(--purple);
                     background: rgba(75, 30, 107, 0.04);
-                    font-family: Raleway, sans-serif;
+                    font-family: 'Sora', sans-serif;
                     font-weight: 600;
                     font-size: 0.88rem;
                     cursor: pointer;
                     color: var(--purple);
                   "
                 >
-                  Monthly ✓
+                  Monthly
                 </button>
               </div>
-              <button
+              <button type="button"
                 class="btn btn-orange"
                 style="
                   width: 100%;
@@ -1476,13 +1525,13 @@
                   padding: 18px;
                 "
               >
-                💛 Donate Securely
+                Donate Securely
               </button>
               <div class="trust-signals">
-                <div class="trust-badge"><span>🔒</span> SSL Secured</div>
-                <div class="trust-badge"><span>📋</span> NGO Act, 2016</div>
-                <div class="trust-badge"><span>📱</span> MTN MoMo Accepted</div>
-                <div class="trust-badge"><span>✅</span> Audited Annually</div>
+                <div class="trust-badge"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" stroke="currentColor" stroke-width="1.6"/></svg></span> SSL Secured</div>
+                <div class="trust-badge"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M9 4.5V3.5A1.5 1.5 0 0 1 10.5 2h3A1.5 1.5 0 0 1 15 3.5v1M9 11h6M9 15h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span> NGO Act, 2016</div>
+                <div class="trust-badge"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M11 18.5h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span> MTN MoMo Accepted</div>
+                <div class="trust-badge"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="m8.5 12 2.5 2.5 4.5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Audited Annually</div>
               </div>
             </div>
             <div
@@ -1516,12 +1565,12 @@
                       flex-shrink: 0;
                     "
                   >
-                    📊
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" style="width:20px;height:20px"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2" stroke="#ffc95c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </div>
                   <div>
                     <strong
                       style="
-                        font-family: Raleway, sans-serif;
+                        font-family: 'Sora', sans-serif;
                         font-size: 0.9rem;
                       "
                       >Full Transparency</strong
@@ -1552,12 +1601,12 @@
                       flex-shrink: 0;
                     "
                   >
-                    📍
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" style="width:20px;height:20px"><path d="M12 21s-6-5.3-6-10a6 6 0 1 1 12 0c0 4.7-6 10-6 10Z" stroke="#ffc95c" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="11" r="2.2" stroke="#ffc95c" stroke-width="1.8"/></svg>
                   </div>
                   <div>
                     <strong
                       style="
-                        font-family: Raleway, sans-serif;
+                        font-family: 'Sora', sans-serif;
                         font-size: 0.9rem;
                       "
                       >Community-Led</strong
@@ -1587,12 +1636,12 @@
                       flex-shrink: 0;
                     "
                   >
-                    📈
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" style="width:20px;height:20px"><path d="M3 17l5-5 3.5 3.5L21 6M21 6h-4.5M21 6v4.5" stroke="#ffc95c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </div>
                   <div>
                     <strong
                       style="
-                        font-family: Raleway, sans-serif;
+                        font-family: 'Sora', sans-serif;
                         font-size: 0.9rem;
                       "
                       >Proven Impact</strong
@@ -1622,12 +1671,12 @@
                       flex-shrink: 0;
                     "
                   >
-                    🌍
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" style="width:20px;height:20px"><circle cx="12" cy="12" r="9" stroke="#ffc95c" stroke-width="1.8"/><path d="M3 12h18M12 3c2.5 2.4 3.9 5.7 4 9-.1 3.3-1.5 6.6-4 9-2.5-2.4-3.9-5.7-4-9 .1-3.3 1.5-6.6 4-9Z" stroke="#ffc95c" stroke-width="1.8" stroke-linejoin="round"/></svg>
                   </div>
                   <div>
                     <strong
                       style="
-                        font-family: Raleway, sans-serif;
+                        font-family: 'Sora', sans-serif;
                         font-size: 0.9rem;
                       "
                       >SDG-Aligned</strong
@@ -1734,7 +1783,7 @@
                   placeholder="e.g. Weekends / 4hrs per week"
                 />
               </div>
-              <button
+              <button type="button"
                 class="btn btn-purple"
                 style="width: 100%; justify-content: center"
               >
@@ -1841,7 +1890,7 @@
                   placeholder="Tell us about your organisation and how you'd like to work with HNG..."
                 ></textarea>
               </div>
-              <button
+              <button type="button"
                 class="btn btn-purple"
                 style="width: 100%; justify-content: center"
               >
@@ -1897,7 +1946,7 @@
             </p>
             <div class="contact-detail">
               <div class="contact-icon">
-                <img src="./assets/icons/location.svg" style="width: 24px" />
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="color: var(--orange)"><path d="M12 21s-6-5.3-6-10a6 6 0 1 1 12 0c0 4.7-6 10-6 10Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="11" r="2.2" stroke="currentColor" stroke-width="1.7"/></svg>
               </div>
               <div class="contact-text">
                 <h4>Address</h4>
@@ -1906,7 +1955,7 @@
             </div>
             <div class="contact-detail">
               <div class="contact-icon">
-                <img src="./assets/icons/mail.svg" style="width: 24px" />
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="color: var(--orange)"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.7"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
               <div class="contact-text">
                 <h4>Email</h4>
@@ -1915,7 +1964,7 @@
             </div>
             <div class="contact-detail">
               <div class="contact-icon">
-                <img src="./assets/icons/clock.svg" style="width: 24px" />
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="color: var(--orange)"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M12 7.5V12l3 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
               <div class="contact-text">
                 <h4>Office Hours</h4>
@@ -1927,7 +1976,7 @@
             </div>
             <div class="contact-detail">
               <div class="contact-icon">
-                <img src="./assets/icons/bank.svg" style="width: 24px" />
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="color: var(--orange)"><path d="M3 21h18M4 18h16M5 18v-7M10 18v-7M14 18v-7M19 18v-7M3.5 9.5 12 4l8.5 5.5H3.5Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
               <div class="contact-text">
                 <h4>Registration</h4>
@@ -1938,26 +1987,28 @@
               </div>
             </div>
             <div class="social-links">
-              <a href="#" class="social-link" title="Facebook">
-                <img
-                  src="./assets/icons/facebook-svgrepo-com.svg"
-                  style="width: 8px"
-                />
+              <a href="#" class="social-link" title="Facebook" aria-label="Facebook">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.7c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v1.8H8v3h2.6V21H14v-8.5h2.5l.4-3H14Z"/>
+                </svg>
               </a>
-              <a href="#" class="social-link" title="Twitter/X">
-                <img src="./assets/icons/icons8-x-90.svg" style="width: 20px" />
+              <a href="#" class="social-link" title="Twitter/X" aria-label="Twitter/X">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M17.5 3h3l-6.6 7.6L21.8 21h-6l-4.7-6.1L5.7 21H2.6l7-8.1L2.4 3h6.2l4.3 5.6L17.5 3Zm-1.1 16.1h1.7L7.7 4.8H5.9l10.5 14.3Z"/>
+                </svg>
               </a>
-              <a href="#" class="social-link" title="Instagram">
-                <img
-                  src="./assets/icons/instagram-logo-bold-svgrepo-com.svg"
-                  style="width: 20px"
-                />
+              <a href="#" class="social-link" title="Instagram" aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="1.7"/>
+                  <circle cx="12" cy="12" r="3.8" stroke="currentColor" stroke-width="1.7"/>
+                  <circle cx="16.8" cy="7.2" r="1.1" fill="currentColor"/>
+                </svg>
               </a>
-              <a href="#" class="social-link" title="YouTube">
-                <img
-                  src="./assets/icons/youtube-svgrepo-com.svg"
-                  style="width: 20px"
-                />
+              <a href="#" class="social-link" title="YouTube" aria-label="YouTube">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="2.5" y="5.5" width="19" height="13" rx="4" stroke="currentColor" stroke-width="1.7"/>
+                  <path d="M10.5 9.3v5.4l4.5-2.7-4.5-2.7Z" fill="currentColor"/>
+                </svg>
               </a>
             </div>
             <div class="safeguard-note">
@@ -1971,10 +2022,11 @@
           <div class="fade-up stagger-2">
             <div
               style="
-                background: var(--off-white);
-                border-radius: 16px;
+                background: var(--cream);
+                border-radius: 24px;
                 padding: 40px;
-                box-shadow: 0 8px 32px rgba(75, 30, 107, 0.06);
+                box-shadow: var(--shadow-md);
+                border-top: 4px solid var(--orange);
               "
             >
               <h3
@@ -2012,7 +2064,7 @@
                   placeholder="How can we help you?"
                 ></textarea>
               </div>
-              <button
+              <button type="button"
                 class="btn btn-purple"
                 style="width: 100%; justify-content: center"
               >
@@ -2040,25 +2092,25 @@
             </p>
             <div class="footer-sdgs">
               <div title="SDG 4">
-                <img
+                <img alt="SDG 4 — Quality Education"
                   src="./assets/sdgs/IMG_8217.PNG"
                   style="width: 30px; height: auto; border-radius: 4px"
                 />
               </div>
               <div title="SDG 5">
-                <img
+                <img alt="SDG 5 — Gender Equality"
                   src="./assets/sdgs/IMG_8215.JPG.jpeg"
                   style="width: 30px; height: auto; border-radius: 4px"
                 />
               </div>
               <div title="SDG 13">
-                <img
+                <img alt="SDG 13 — Climate Action"
                   src="./assets/sdgs/IMG_8216.JPG.jpeg"
                   style="width: 30px; height: auto; border-radius: 4px"
                 />
               </div>
               <div title="SDG 16">
-                <img
+                <img alt="SDG 16 — Peace & Justice"
                   src="./assets/sdgs/IMG_8218.JPG.jpeg"
                   style="width: 30px; height: auto; border-radius: 4px"
                 />
@@ -2105,7 +2157,7 @@
                 line-height: 1.6;
               "
             >
-              <strong style="color: var(--gold); font-family: Raleway"
+              <strong style="color: var(--gold); font-family: 'Sora'"
                 >info@hng.org.ug</strong
               ><br />
               Mbale City, Uganda
@@ -2128,7 +2180,7 @@
         </div>
       </div>
     </footer>
-    <script src="./main.js"></script>
+    <script src="./main.js?v=3"></script>
     <script>
       // ===== NAVIGATION SCROLL =====
       const nav = document.getElementById('mainNav');
