@@ -1428,13 +1428,14 @@ a {
 .work-panel-img {
   border-radius: 12px;
   overflow: hidden;
-  height: 420px;
+  height: 480px;
   box-shadow: 0 24px 72px rgba(75, 30, 107, 0.15);
 }
 .work-panel-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
 }
 .work-challenge {
   background: rgba(75, 30, 107, 0.04);
